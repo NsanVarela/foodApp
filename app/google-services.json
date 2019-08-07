@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "251873509746",
+    "firebase_url": "https://android3wresto.firebaseio.com",
+    "project_id": "android3wresto",
+    "storage_bucket": "android3wresto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251873509746:android:1b6ad60d45edd588",
+        "android_client_info": {
+          "package_name": "com.projet.nsv.nsvapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251873509746-joldcokq38l2g5fc34nng5prpiavoua6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvzfnuQKcKjyvIb6_b-Hc3h-rSgRJm8wo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251873509746-joldcokq38l2g5fc34nng5prpiavoua6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">NSV App</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="hint_edit_text">Ecrivez un message</string>
+
+    <string name="username_hint_input">Email</string>
+    <string name="password_hint_input">Mot de passe</string>
+    <string name="firstname_hint_input">Prénom</string>
+    <string name="lastname_hint_input">Nom</string>
+
+    <string name="username_tv">Email</string>
+    <string name="password_tv">Mot de passe</string>
+    <string name="firstname_tv">Prénom</string>
+    <string name="lastname_tv">Nom</string>
+
+
+    <string name="displayed_data_user" />
+
+    <string name="login_button">Créer un compte</string>
+    <string name="signin_button">Connexion</string>
+    <string name="save_user_info_button">Sauvegarder mes infos</string>
+    <string name="display_user_data_button">Afficher mes infos</string>
+    <string name="signup_user_button">Enregistrer</string>
+
+    <string name="signin_title">Connexion</string>
+    <string name="logo">TODO</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
