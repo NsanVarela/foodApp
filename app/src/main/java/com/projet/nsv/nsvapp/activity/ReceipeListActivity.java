@@ -44,7 +44,7 @@ public class ReceipeListActivity extends AppCompatActivity {
         Log.d(TAG, "initImageBitmaps: preparing bitmaps");
 
         mImagesUrls.add("https://i.redd.it/jwdbh6wvh1f31.jpg");
-        mReceipeTitles.add("Attempt at hot-chicken sandwiches");
+        mReceipeTitles.add("Hot-chicken sandwiches");
 
         mImagesUrls.add("https://i.redd.it/8araqat0z0f31.jpg");
         mReceipeTitles.add("Bacon, Sausage, Tomato Pizza");
@@ -71,7 +71,7 @@ public class ReceipeListActivity extends AppCompatActivity {
         mReceipeTitles.add("Crab noodle soup");
 
         mImagesUrls.add("https://i.redd.it/off2p9zh30f31.jpg");
-        mReceipeTitles.add("Mushroom and Bacon Farfalle Alfredo with Green Chillies and Truffle Oil");
+        mReceipeTitles.add("Mushroom & Bacon Farfalle Alfredo with Green Chillies and Truffle Oil");
 
         initRecyclerView();
     }
