@@ -1,6 +1,7 @@
 package com.projet.nsv.nsvapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,6 +56,9 @@ public class ReceipeListAdapter extends RecyclerView.Adapter<ReceipeListAdapter.
                 Log.d(TAG, "onClick: clicked on: " + mReceipeTitles.get(position));
 
                 Toast.makeText(mContext, mReceipeTitles.get(position), Toast.LENGTH_SHORT).show();
+
+
+
             }
         });
 
@@ -70,16 +74,16 @@ public class ReceipeListAdapter extends RecyclerView.Adapter<ReceipeListAdapter.
 
         ImageView receipeImage;
         TextView receipeTitle;
-        TextView receipeDescription;
         LinearLayout receipe_parent_llayout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             receipeImage = itemView.findViewById(R.id.iv_receipeImage);
             receipeTitle = itemView.findViewById(R.id.tv_receipeTitle);
-            receipeDescription = itemView.findViewById(R.id.tv_receipeDescription);
             receipe_parent_llayout = itemView.findViewById(R.id.receipe_parent_llayout);
         }
     }
+
+
 
 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,9 +14,12 @@ import android.widget.Adapter;
 import android.widget.ImageView;
 import com.projet.nsv.nsvapp.R;
 import com.projet.nsv.nsvapp.adapter.ReceipeListAdapter;
+import com.projet.nsv.nsvapp.manager.WsManager;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ReceipeListActivity extends AppCompatActivity {
 
@@ -36,12 +40,15 @@ public class ReceipeListActivity extends AppCompatActivity {
         setContentView(R.layout.recycler_view);
         Log.d(TAG, "onCreate: started.");
 
+        final WsManager wsManager = new WsManager();
+
         initImageBitmaps();
 
     }
 
     private void initImageBitmaps() {
         Log.d(TAG, "initImageBitmaps: preparing bitmaps");
+
 
         mImagesUrls.add("https://i.redd.it/jwdbh6wvh1f31.jpg");
         mReceipeTitles.add("Hot-chicken sandwiches");
@@ -84,7 +91,11 @@ public class ReceipeListActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
 
+    public void openReceipeDetailsActivity() {
+        Intent intent = new Intent(this, ReceipeDetailsActivity.class);
+        startActivity(intent);
     }
 }
 

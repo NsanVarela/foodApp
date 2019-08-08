@@ -27,4 +27,13 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="ratingBarStyleSmall" parent="Theme.AppCompat">
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:scaleX">0.5</item>
+        <item name="android:scaleY">0.5</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
 </resources>
