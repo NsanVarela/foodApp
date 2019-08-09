@@ -14,6 +14,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.projet.nsv.nsvapp.R;
 import com.projet.nsv.nsvapp.manager.WsManager;
+import com.projet.nsv.nsvapp.model.User;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,6 +35,7 @@ public class SplashScreenActivity extends AppCompatActivity implements WsManager
     EditText name, password;
     TextView infoUser;
     Button btnSignIn, btnRegister;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +89,7 @@ public class SplashScreenActivity extends AppCompatActivity implements WsManager
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("username", name.getText().toString());
         editor.putString("password", password.getText().toString());
+
         editor.apply();
         Toast.makeText(this, "Saved!", Toast.LENGTH_LONG).show();
     }

@@ -121,6 +121,7 @@
                 android:textSize="16dp"
                 android:textStyle="bold" />
             <TextView
+                android:id="@+id/tv_preparation_time"
                 android:layout_width="85dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -132,7 +133,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/icon_preparation"
                 android:text="15 min"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
 
         </RelativeLayout>
 
@@ -170,6 +171,7 @@
                 android:textSize="16dp"
                 android:textStyle="bold" />
             <TextView
+                android:id="@+id/tv_cook_time"
                 android:layout_width="85dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -219,6 +221,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
             <TextView
+                android:id="@+id/tv_calories"
                 android:layout_width="85dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -297,7 +300,17 @@
 
         </RelativeLayout>
 
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:startColor="@android:color/transparent"
+        />
+
     </RelativeLayout>
+
+
 
 </androidx.core.widget.NestedScrollView>
 

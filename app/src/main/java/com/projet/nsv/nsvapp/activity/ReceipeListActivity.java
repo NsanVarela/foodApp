@@ -24,7 +24,7 @@ public class ReceipeListActivity extends AppCompatActivity implements WsManager.
 
     private static final String TAG = "ReceipeListActivity";
 
-    private static final String SELECTED_RECEIPE_ID_KEY = "SELECTED_RECEIPE_ID_KEY";
+    public static final String SELECTED_RECEIPE_ID_KEY = "SELECTED_RECEIPE_ID_KEY";
     private List<Receipe> receipeList = new ArrayList<>();
     private RecyclerView recyclerView;
     private Gson gson = new Gson();
@@ -73,6 +73,7 @@ public class ReceipeListActivity extends AppCompatActivity implements WsManager.
         Intent intent = new Intent(ReceipeListActivity.this, ReceipeDetailsActivity.class);
         intent.putExtra(SELECTED_RECEIPE_ID_KEY, receipe.getId());
         startActivity(intent);
+
     }
 
 
