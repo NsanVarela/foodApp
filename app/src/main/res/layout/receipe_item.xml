@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="200dp"
@@ -11,8 +13,8 @@
         android:id="@+id/iv_receipeImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
 
     <View
         android:layout_width="match_parent"
@@ -24,27 +26,27 @@
         android:id="@+id/receipe_parent_llayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/tv_receipeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:layout_marginTop="120dp"
+            android:text="This is our receipe title, you can check that."
             android:textColor="@color/white"
-            android:textSize="24dp"
-            android:text="This is our receipe title, you can check that."/>
+            android:textSize="24dp"/>
 
             <RatingBar
                 android:id="@+id/rating"
                 style="@style/customRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:progressTint="@color/orange_star"
                 android:numStars="5"
+                android:progressTint="@color/orange_star"
                 android:rating="3.5"
                 android:stepSize="0.5" />
 

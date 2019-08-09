@@ -13,8 +13,8 @@ import java.util.Map;
 
 public class WsManager {
 
-    private static final String TAG = "nsanvMessage";
     public static final String URL = "http://51.15.254.4:9001/ws/resto/";
+    private static final String TAG = "nsanvMessage";
 
     public void sendPostRequest(String target, final Listener listener, Map<String, String> params) {
 

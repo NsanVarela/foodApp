@@ -12,20 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.ReceipeDetailsActivity"></activity>
-        <activity android:name=".activity.ReceipeListActivity" />
-        <activity android:name=".activity.RegisterActivity" />
         <activity
             android:name=".activity.SplashScreenActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.ReceipeDetailsActivity"></activity>
+        <activity android:name=".activity.ReceipeListActivity"></activity>
+        <activity android:name=".activity.RegisterActivity"></activity>
+        <activity android:name=".activity.LogOutActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

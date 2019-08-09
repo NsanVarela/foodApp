@@ -4,6 +4,10 @@ public class User {
     private Long id;
     private String name;
     private String email;
+    private Error error;
+
+    public User() {
+    }
 
     public Error getError() {
         return error;
@@ -11,11 +15,6 @@ public class User {
 
     public void setError(Error error) {
         this.error = error;
-    }
-
-    private Error error;
-
-    public User() {
     }
 
     public Long getId() {

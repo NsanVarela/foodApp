@@ -56,6 +56,10 @@ public class ReceipeListAdapter extends RecyclerView.Adapter<ReceipeListAdapter.
         return receipes.size();
     }
 
+    public interface ItemClickListener {
+        void onClickListener(int position);
+    }
+
     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         CardView receipeId;
         TextView receipeTitle;
@@ -81,11 +85,6 @@ public class ReceipeListAdapter extends RecyclerView.Adapter<ReceipeListAdapter.
                 itemClickListener.onClickListener(position);
             }
         }
-    }
-
-
-    public interface ItemClickListener {
-        void onClickListener(int position);
     }
 
 

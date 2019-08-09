@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_below="@+id/icon_layout">
 
+
 <RelativeLayout
 
     android:layout_width="match_parent"
@@ -21,30 +22,30 @@
         <ImageView
             android:id="@+id/iv_receipeImage"
             android:layout_width="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
             android:layout_height="250dp"
-            android:scaleType="centerCrop"
             android:adjustViewBounds="true"
-            android:background="@drawable/img_bg"/>
+            android:background="@drawable/img_bg"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <View
             android:layout_width="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
             android:layout_height="250dp"
-            android:background="#88000000">
+            android:background="#88000000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
         </View>
 
         <LinearLayout
             android:id="@+id/receipe_parent_llayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_receipeImage"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:orientation="vertical">
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_receipeImage">
 
             <TextView
                 android:id="@+id/tv_receipeTitle"
@@ -52,10 +53,10 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
+                android:text="This is our receipe title, you can check that."
                 android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                android:text="This is our receipe title, you can check that."/>
+                android:textSize="20sp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -79,11 +80,11 @@
         android:id="@+id/icon_layout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_below="@+id/constraint_header"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_below="@+id/constraint_header"
         android:background="#F5F5F5"
         android:gravity="center">
 
@@ -91,8 +92,8 @@
             android:id="@+id/prepa_element"
             android:layout_width="135dp"
             android:layout_height="match_parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/cook_element">
+            app:layout_constraintEnd_toStartOf="@+id/cook_element"
+            app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
                 android:id="@+id/icon_preparation"
@@ -141,8 +142,8 @@
             android:id="@+id/cook_element"
             android:layout_width="140dp"
             android:layout_height="match_parent"
-            app:layout_constraintStart_toEndOf="@+id/prepa_element"
-            app:layout_constraintEnd_toStartOf="@+id/calorie_element">
+            app:layout_constraintEnd_toStartOf="@+id/calorie_element"
+            app:layout_constraintStart_toEndOf="@+id/prepa_element">
 
             <ImageView
                 android:id="@+id/icon_cook_time"
@@ -191,8 +192,8 @@
             android:id="@+id/calorie_element"
             android:layout_width="135dp"
             android:layout_height="match_parent"
-            app:layout_constraintStart_toEndOf="@+id/cook_element"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cook_element">
 
             <ImageView
                 android:id="@+id/icon_calories"
@@ -244,14 +245,14 @@
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="410dp"
+                android:layout_below="@+id/icon_layout"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
-                android:layout_marginBottom="0dp"
-                android:layout_below="@+id/icon_layout">
+                android:layout_marginBottom="0dp">
 
                 <TextView
                     android:id="@+id/tv_ingredients_title"
@@ -267,16 +268,16 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="@+id/tv_ingredients_title"
                     android:layout_marginTop="40dp"
-                    android:text="Et interdum acciderat, ut siquid in penetrali secreto nullo citerioris vitae ministro praesente paterfamilias uxori susurrasset in aurem, velut Amphiarao referente aut Marcio, quondam vatibus inclitis, postridie disceret imperator. ideoque etiam parietes arcanorum soli conscii timebantur. Et interdum acciderat, ut siquid in penetrali secreto nullo citerioris vitae ministro praesente paterfamilias uxori susurrasset in aurem, velut Amphiarao referente aut Marcio, quondam vatibus inclitis, postridie disceret imperator. ideoque etiam parietes arcanorum soli conscii timebantur."
-                    android:padding="20dp" />
+                    android:padding="20dp"
+                    android:text="Et interdum acciderat, ut siquid in penetrali secreto nullo citerioris vitae ministro praesente paterfamilias uxori susurrasset in aurem, velut Amphiarao referente aut Marcio, quondam vatibus inclitis, postridie disceret imperator. ideoque etiam parietes arcanorum soli conscii timebantur. Et interdum acciderat, ut siquid in penetrali secreto nullo citerioris vitae ministro praesente paterfamilias uxori susurrasset in aurem, velut Amphiarao referente aut Marcio, quondam vatibus inclitis, postridie disceret imperator. ideoque etiam parietes arcanorum soli conscii timebantur." />
 
                 <TextView
                     android:id="@+id/tv_instruction_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_ingredients_list"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/tv_ingredients_list"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="0dp"
                     android:layout_marginEnd="0dp"
@@ -288,11 +289,11 @@
                     android:id="@+id/tv_instructions_list"
                     android:layout_width="409dp"
                     android:layout_height="221dp"
+                    android:layout_below="@+id/tv_instruction_title"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/tv_instruction_title"
-                    android:layout_marginTop="0dp"
                     android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
                     android:layout_marginEnd="0dp"
                     android:layout_marginBottom="0dp"
                     android:padding="20dp"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
     android:animateLayoutChanges="true"
     android:background="@drawable/grad_bg"
     tools:context="com.projet.nsv.nsvapp.activity.SplashScreenActivity">
@@ -174,20 +175,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:visibility="gone"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+        android:layout_marginRight="20dp"
+        android:visibility="gone">
 
     <Button
+        style="@style/saveInfoButton"
         android:onClick="saveInfo"
-        android:text="@string/save_user_info_button"
-        style="@style/saveInfoButton" />
+        android:text="@string/save_user_info_button" />
 
     <Button
         android:id="@+id/displayData"
+        style="@style/displayDataButton"
         android:onClick="displayData"
-        android:text="@string/display_user_data_button"
-        style="@style/displayDataButton" />
+        android:text="@string/display_user_data_button" />
 
     </RelativeLayout>
 

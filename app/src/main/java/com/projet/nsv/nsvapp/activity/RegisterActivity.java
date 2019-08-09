@@ -19,11 +19,10 @@ import java.util.Map;
 public class RegisterActivity extends AppCompatActivity implements WsManager.Listener {
 
     private static final String TAG = "nsanvMessage";
-    private Gson gson = new Gson();
-    private List<User> userList = new ArrayList<>();
-
     EditText email, password, lastname, firstname;
     Button signupBtn;
+    private Gson gson = new Gson();
+    private List<User> userList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
