@@ -54,7 +54,7 @@
                 android:orientation="vertical">
                 <RatingBar
                     android:id="@+id/rating"
-                    android:theme="@style/ratingBarStyleSmall"
+                    style="@style/customRatingBar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:numStars="5"

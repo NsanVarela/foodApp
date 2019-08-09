@@ -1,38 +1,34 @@
 package com.projet.nsv.nsvapp.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.projet.nsv.nsvapp.R;
+import com.projet.nsv.nsvapp.model.Receipe;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class ReceipeListAdapter extends RecyclerView.Adapter<ReceipeListAdapter.ViewHolder> {
 
     private static final String TAG = "ReceipeListAdapter";
-    private ArrayList<String> mReceipeTitles = new ArrayList<>();
-    private ArrayList<String> mReceipeImages = new ArrayList<>();
-    private Context mContext;
 
-    public ReceipeListAdapter(ArrayList<String> mReceipeTitles, ArrayList<String> mReceipeImages, Context mContext) {
-        this.mReceipeTitles = mReceipeTitles;
-        this.mReceipeImages = mReceipeImages;
-        this.mContext = mContext;
+    private List<Receipe> receipes;
+    private Context context;
+
+    public ReceipeListAdapter(List<Receipe> receipes, Context context) {
+        this.receipes = receipes;
+        this.context = context;
     }
 
-    /* Inflate la vue */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,45 +41,36 @@ public class ReceipeListAdapter extends RecyclerView.Adapter<ReceipeListAdapter.
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
 
-        Picasso.get().load(mReceipeImages.get(position)).into(holder.receipeImage);
-
-        holder.receipeTitle.setText(mReceipeTitles.get(position));
-
-        // Pop up pour un message au clic sur l'image
-        holder.receipe_parent_llayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "onClick: clicked on: " + mReceipeTitles.get(position));
-
-                Toast.makeText(mContext, mReceipeTitles.get(position), Toast.LENGTH_SHORT).show();
-
-
-
-            }
-        });
-
+        Receipe receipe = receipes.get(position);
+        holder.receipeId.setTag(receipe.getId());
+        holder.receipeTitle.setText(receipe.getTitle());
+        Picasso.get().load(receipe.getPhoto()).into(holder.receipeImage);
+        holder.receipeNote.setRating(receipe.getNote());
     }
 
     // Retourne le nombre d'items dans la liste
     @Override
     public int getItemCount() {
-        return mReceipeTitles.size();
+        return receipes.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
-        ImageView receipeImage;
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        CardView receipeId;
         TextView receipeTitle;
-        LinearLayout receipe_parent_llayout;
+        ImageView receipeImage;
+        RatingBar receipeNote;
 
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            receipeImage = itemView.findViewById(R.id.iv_receipeImage);
-            receipeTitle = itemView.findViewById(R.id.tv_receipeTitle);
-            receipe_parent_llayout = itemView.findViewById(R.id.receipe_parent_llayout);
+
+        ViewHolder(View v) {
+            super(v);
+            receipeId = v.findViewById(R.id.card_view);
+            receipeTitle = v.findViewById(R.id.tv_receipeTitle);
+            receipeImage = v.findViewById(R.id.iv_receipeImage);
+            receipeNote = v.findViewById(R.id.rating);
         }
-    }
 
+
+    }
 
 
 }

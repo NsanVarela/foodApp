@@ -1,16 +1,12 @@
 package com.projet.nsv.nsvapp.manager;
 
-import android.content.Context;
 import android.util.Log;
-import android.widget.Toast;
-
 import com.github.kittinunf.fuel.Fuel;
 import com.github.kittinunf.fuel.core.FuelError;
 import com.github.kittinunf.fuel.core.Handler;
 import com.github.kittinunf.fuel.core.Request;
 import com.github.kittinunf.fuel.core.Response;
 import com.google.gson.Gson;
-
 import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;

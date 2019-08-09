@@ -1,21 +1,16 @@
 package com.projet.nsv.nsvapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
 import com.google.gson.Gson;
 import com.projet.nsv.nsvapp.R;
 import com.projet.nsv.nsvapp.manager.WsManager;
 import com.projet.nsv.nsvapp.model.User;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
