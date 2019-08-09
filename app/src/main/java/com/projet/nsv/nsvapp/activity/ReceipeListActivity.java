@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,10 +20,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ReceipeListActivity extends AppCompatActivity implements WsManager.Listener {
+public class ReceipeListActivity extends AppCompatActivity implements WsManager.Listener, ReceipeListAdapter.ItemClickListener {
 
     private static final String TAG = "ReceipeListActivity";
 
+    private static final String SELECTED_RECEIPE_ID_KEY = "SELECTED_RECEIPE_ID_KEY";
     private List<Receipe> receipeList = new ArrayList<>();
     private RecyclerView recyclerView;
     private Gson gson = new Gson();
@@ -48,20 +50,32 @@ public class ReceipeListActivity extends AppCompatActivity implements WsManager.
 
     @Override
     public void onFailure(String errorMessage) {
-        Log.e("3WResto", errorMessage);
+        Log.e("appFood", errorMessage);
     }
 
     @Override
     public void onSuccess(String content) {
         Receipe[] founderArray = gson.fromJson(content, Receipe[].class);
         receipeList = Arrays.asList(founderArray);
-        Log.d("3WResto", receipeList.toString());
+        Log.d("appFood", receipeList.toString());
 
-        ReceipeListAdapter adapter = new ReceipeListAdapter(receipeList, this);
+        ReceipeListAdapter adapter = new ReceipeListAdapter(receipeList,this, this);
         recyclerView.setAdapter(adapter);
         progressbar.setVisibility(View.GONE);
 
     }
+
+
+    public void onClickListener(int position) {
+        Receipe receipe = receipeList.get(position);
+        Log.d("appFood", "receipe selected :" + receipe);
+
+        Intent intent = new Intent(ReceipeListActivity.this, ReceipeDetailsActivity.class);
+        intent.putExtra(SELECTED_RECEIPE_ID_KEY, receipe.getId());
+        startActivity(intent);
+    }
+
+
 }
 
 

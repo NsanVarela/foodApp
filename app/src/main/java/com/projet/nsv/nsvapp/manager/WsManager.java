@@ -32,13 +32,13 @@ public class WsManager {
         Fuel.post(URL + target).body(jsonString, Charset.forName("UTF-8")).header(header).responseString(new Handler<String>() {
             @Override
             public void failure(Request request, Response response, FuelError fuelError) {
-                Log.e("3WResto","error : " + fuelError);
+                Log.e("appFood","error : " + fuelError);
                 listener.onFailure(fuelError.toString());
             }
 
             @Override
             public void success(Request request, Response response, String s) {
-                Log.d("3WResto","success : " + s);
+                Log.d("appFood","success : " + s);
                 listener.onSuccess(s);
             }
 

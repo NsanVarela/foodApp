@@ -22,18 +22,20 @@ public class ReceipeListAdapter extends RecyclerView.Adapter<ReceipeListAdapter.
     private static final String TAG = "ReceipeListAdapter";
 
     private List<Receipe> receipes;
+    private ReceipeListAdapter.ItemClickListener itemClickListener;
     private Context context;
 
-    public ReceipeListAdapter(List<Receipe> receipes, Context context) {
+    public ReceipeListAdapter(List<Receipe> receipes, Context context, ReceipeListAdapter.ItemClickListener listener) {
         this.receipes = receipes;
         this.context = context;
+        this.itemClickListener = listener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.receipe_item, parent, false);
-        ViewHolder holder = new ViewHolder(view);
+        ViewHolder holder = new ViewHolder(view, itemClickListener);
         return holder;
     }
 
@@ -54,22 +56,36 @@ public class ReceipeListAdapter extends RecyclerView.Adapter<ReceipeListAdapter.
         return receipes.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         CardView receipeId;
         TextView receipeTitle;
         ImageView receipeImage;
         RatingBar receipeNote;
+        private ReceipeListAdapter.ItemClickListener itemClickListener;
 
 
-        ViewHolder(View v) {
+        ViewHolder(View v, ItemClickListener itemClickListener) {
             super(v);
+            this.itemClickListener = itemClickListener;
             receipeId = v.findViewById(R.id.card_view);
             receipeTitle = v.findViewById(R.id.tv_receipeTitle);
             receipeImage = v.findViewById(R.id.iv_receipeImage);
             receipeNote = v.findViewById(R.id.rating);
+            v.setOnClickListener(this);
         }
 
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            Log.d("appFood", "onClick " + position);
+            if(itemClickListener != null) {
+                itemClickListener.onClickListener(position);
+            }
+        }
+    }
 
+
+    public interface ItemClickListener {
+        void onClickListener(int position);
     }
 
 
