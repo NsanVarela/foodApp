@@ -4,7 +4,6 @@ public class User {
     private Long id;
     private String name;
     private String email;
-    private Compagny company;
 
     public Error getError() {
         return error;
@@ -43,25 +42,15 @@ public class User {
         this.email = email;
     }
 
-    public Compagny getCompany() {
-        return company;
-    }
 
-    public void setCompany(Compagny company) {
-        this.company = company;
-    }
-
-    public String getCatchPhrase() {
-        return company.getCatchPhrase();
-    }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", company=" + company +
+                ", email='" + email +
                 '}';
     }
+
 }
