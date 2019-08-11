@@ -22,7 +22,7 @@
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:adjustViewBounds="true"
-            android:contentDescription="@string/logo"
+            android:contentDescription="@string/str_logo"
             android:scaleType="fitCenter"
             android:src="@drawable/img_splash_logo" />
 
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/signin_title"
+                android:text="@string/str_signinTitle"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
@@ -61,7 +61,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:text="@string/username_tv"
+                        android:text="@string/tv_email"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="@dimen/text_size" />
@@ -74,7 +74,7 @@
                         android:autofillHints=""
                         android:background="@drawable/et_bg"
                         android:fontFamily="sans-serif-light"
-                        android:hint="@string/username_hint_input"
+                        android:hint="@string/input_hint_email"
                         android:inputType=""
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
@@ -94,7 +94,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:text="@string/password_tv"
+                        android:text="@string/tv_password"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="@dimen/text_size" />
@@ -106,7 +106,7 @@
                         android:layout_marginTop="5dp"
                         android:background="@drawable/et_bg"
                         android:fontFamily="sans-serif-light"
-                        android:hint="@string/password_hint_input"
+                        android:hint="@string/input_hint_password"
                         android:importantForAutofill="no"
                         android:inputType="textPassword"
                         android:paddingLeft="15dp"
@@ -121,7 +121,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="20dp"
                         android:fontFamily="sans-serif-light"
-                        android:text="@string/displayed_data_user"
+                        android:text="@string/str_displayUserData"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="@dimen/text_size" />
@@ -141,7 +141,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:paddingLeft="70dp"
                     android:paddingRight="70dp"
-                    android:text="@string/signin_button"
+                    android:text="@string/str_signinBtn"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="@dimen/button_text_size" />
@@ -159,7 +159,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:paddingLeft="70dp"
                     android:paddingRight="70dp"
-                    android:text="@string/login_button"
+                    android:text="@string/str_registerBtn"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="@dimen/button_text_size" />
@@ -182,13 +182,13 @@
     <Button
         style="@style/saveInfoButton"
         android:onClick="saveInfo"
-        android:text="@string/save_user_info_button" />
+        android:text="@string/str_saveUserInfoBtn" />
 
     <Button
         android:id="@+id/displayData"
         style="@style/displayDataButton"
         android:onClick="displayData"
-        android:text="@string/display_user_data_button" />
+        android:text="@string/str_displayUserDataBtn" />
 
     </RelativeLayout>
 

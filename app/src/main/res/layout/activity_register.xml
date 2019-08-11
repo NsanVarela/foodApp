@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:text="@string/username_tv"
+                android:text="@string/tv_email"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size" />
@@ -38,7 +38,7 @@
                 android:autofillHints=""
                 android:background="@drawable/et_bg"
                 android:fontFamily="sans-serif-light"
-                android:hint="@string/username_hint_input"
+                android:hint="@string/input_hint_email"
                 android:inputType="textEmailAddress"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:text="@string/password_tv"
+                android:text="@string/tv_password"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size" />
@@ -68,7 +68,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/et_bg"
                 android:fontFamily="sans-serif-light"
-                android:hint="@string/password_hint_input"
+                android:hint="@string/input_hint_password"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
                 android:paddingLeft="15dp"
@@ -88,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:text="@string/lastname_tv"
+                android:text="@string/tv_lastName"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size" />
@@ -100,7 +100,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/et_bg"
                 android:fontFamily="sans-serif-light"
-                android:hint="@string/lastname_hint_input"
+                android:hint="@string/input_hint_lastName"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 android:paddingLeft="15dp"
@@ -112,6 +112,7 @@
 
         <!-- FIRSTNAME -->
         <LinearLayout
+            android:id="@+id/ll_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="260dp"
@@ -120,7 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:text="@string/firstname_tv"
+                android:text="@string/tv_firstName"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size" />
@@ -131,7 +132,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/et_bg"
                 android:fontFamily="sans-serif-light"
-                android:hint="@string/firstname_hint_input"
+                android:hint="@string/input_hint_firstName"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 android:paddingLeft="15dp"
@@ -153,13 +154,24 @@
                 android:fontFamily="sans-serif-medium"
                 android:paddingLeft="70dp"
                 android:paddingRight="70dp"
-                android:text="@string/signup_user_button"
+                android:text="@string/str_saveRegistrationBtn"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="@dimen/button_text_size" />
         </LinearLayout>
 
-
+        <fragment
+            android:id="@+id/fragment"
+            android:name="com.projet.nsv.nsvapp.fragment.FirebaseFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_register"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            tools:layout="@layout/fragment_firebase"/>
 
 
     </RelativeLayout>

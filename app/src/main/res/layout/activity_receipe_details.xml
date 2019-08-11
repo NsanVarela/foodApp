@@ -218,7 +218,7 @@
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/icon_calories"
-                android:text="@string/calories_title"
+                android:text="@string/str_caloriesTitle"
                 android:textSize="16sp"
                 android:textStyle="bold" />
             <TextView
@@ -259,7 +259,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="@string/ingredients_title"
+                    android:text="@string/str_ingredientsTitle"
                     android:textStyle="bold" />
 
                 <TextView
@@ -282,7 +282,7 @@
                     android:layout_marginTop="0dp"
                     android:layout_marginEnd="0dp"
                     android:padding="10dp"
-                    android:text="@string/instructions_title"
+                    android:text="@string/str_instructionsTitle"
                     android:textStyle="bold" />
 
                 <TextView

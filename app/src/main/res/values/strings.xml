@@ -1,37 +1,34 @@
 <resources>
-    <string name="app_name">NSV App</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
-    <string name="hint_edit_text">Ecrivez un message</string>
+    <string name="str_appName">FOOD APP</string>
+    <string name="str_editMessage">Enter a message</string>
+    <string name="str_sendBtn">Send</string>
+    <string name="input_hint_editMessage">Ecrivez un message</string>
 
-    <string name="username_hint_input">Email</string>
-    <string name="password_hint_input">Mot de passe</string>
-    <string name="firstname_hint_input">Prénom</string>
-    <string name="lastname_hint_input">Nom</string>
+    <string name="input_hint_email">Email</string>
+    <string name="input_hint_password">Mot de passe</string>
+    <string name="input_hint_firstName">Prénom</string>
+    <string name="input_hint_lastName">Nom</string>
 
-    <string name="username_tv">Email</string>
-    <string name="password_tv">Mot de passe</string>
-    <string name="firstname_tv">Prénom</string>
-    <string name="lastname_tv">Nom</string>
+    <string name="tv_email">Email</string>
+    <string name="tv_password">Mot de passe</string>
+    <string name="tv_firstName">Prénom</string>
+    <string name="tv_lastName">Nom</string>
 
+    <string name="str_registerBtn">Créer un compte</string>
+    <string name="str_signinBtn">Connexion</string>
+    <string name="str_saveUserInfoBtn">Sauvegarder mes infos</string>
+    <string name="str_displayUserDataBtn">Afficher mes infos</string>
+    <string name="str_displayUserData" />
+    <string name="str_saveRegistrationBtn">Enregistrer</string>
 
-    <string name="displayed_data_user" />
+    <string name="str_signinTitle">Connexion</string>
+    <string name="str_logo">TODO</string>
 
-    <string name="login_button">Créer un compte</string>
-    <string name="signin_button">Connexion</string>
-    <string name="save_user_info_button">Sauvegarder mes infos</string>
-    <string name="display_user_data_button">Afficher mes infos</string>
-    <string name="signup_user_button">Enregistrer</string>
+    <string name="str_ingredientsTitle">Ingredients</string>
+    <string name="str_instructionsTitle">Instructions</string>
+    <string name="str_caloriesTitle">Calories</string>
 
-    <string name="signin_title">Connexion</string>
-    <string name="logo">TODO</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="ingredients_title">Ingredients</string>
-    <string name="instructions_title">Instructions</string>
-    <string name="calories_title">Calories</string>
-
+    <string name="str_fragmentTitle">Se connecter avec :</string>
+    <string name="str_gmailBtn">gmail</string>
 
 </resources>
