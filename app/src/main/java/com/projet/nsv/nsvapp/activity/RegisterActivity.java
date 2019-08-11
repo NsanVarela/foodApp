@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import com.google.gson.Gson;
@@ -48,6 +50,9 @@ public class RegisterActivity extends AppCompatActivity implements WsManager.Lis
             params.put("nom",lastname.getText().toString());
             params.put("prenom",firstname.getText().toString());
             wsManager.sendPostRequest("addCompte", RegisterActivity.this, params);
+
+            Animation animation = AnimationUtils.loadAnimation(RegisterActivity.this, R.anim.bounce);
+            signupBtn.startAnimation(animation);
             }
         });
 

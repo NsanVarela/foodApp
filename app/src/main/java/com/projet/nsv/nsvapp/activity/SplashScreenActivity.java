@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
@@ -56,7 +58,10 @@ public class SplashScreenActivity extends AppCompatActivity implements WsManager
             @Override
             public void onClick(View v) {
                 openRegisterActivity();
+                Animation animation = AnimationUtils.loadAnimation(SplashScreenActivity.this, R.anim.fadein);
+                btnRegister.startAnimation(animation);
             }
+
         });
 
         final WsManager wsManager = new WsManager();
@@ -68,6 +73,9 @@ public class SplashScreenActivity extends AppCompatActivity implements WsManager
                 params.put("login", name.getText().toString());
                 params.put("pass",password.getText().toString());
                 wsManager.sendPostRequest("connexion", SplashScreenActivity.this, params);
+
+                Animation animation = AnimationUtils.loadAnimation(SplashScreenActivity.this, R.anim.fadein);
+                btnSignIn.startAnimation(animation);
             }
         });
 
